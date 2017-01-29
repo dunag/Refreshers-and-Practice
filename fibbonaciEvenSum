@@ -1,0 +1,27 @@
+function fibonacci(number){
+  if(number == 0 || number == 1){
+    return number;
+  }
+  else{
+    return fibonacci(number-1) + fibonacci(number-2);
+  }
+}
+
+
+
+function sumEvenValues(){
+  var sum = 0;
+  
+  var i = 0; // value
+  var j = 0; // index
+  
+  while (i <= 4000000){
+    
+    i = fibonacci(j);
+    if(i%2 == 0){
+      sum += i;
+    }
+    j++;
+  }
+  return sum;
+}
